@@ -1,0 +1,6 @@
+Options[%KEY%]: gauge,nopercent,growright
+YLegend[%KEY%]: Latency:
+Title[%KEY%]: Total Latency
+MaxBytes[%KEY%]: 1000 
+Target[%KEY%]: `sh %FILE%`
+PageTop[%KEY%]: <h1>Total Latency ms - %HOST%</h1>
