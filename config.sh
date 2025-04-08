@@ -1,8 +1,9 @@
 #!/bin/sh
 
 CONF=mrtg.conf
+OUTPUT=/var/www/html/mrtg/
 
-echo "WorkDir: /var/www/html/mrtg/" > $CONF
+echo "WorkDir: $OUTPUT" > $CONF
 
 rm _tmp*.sh
 while IFS=: read -r action host; do
@@ -16,4 +17,10 @@ while IFS=: read -r action host; do
 	cat ${action}.mrtg | sed "s/%HOST%/$host/g" | sed "s/%KEY%/$KEY/g" | sed "s/%FILE%/$FILE/g" >> $CONF
 done  < config.txt
 
-indexmaker mrtg.conf --output /var/www/html/mrtg/index.html
+indexmaker mrtg.conf --output $OUTPUT/index.html
+
+for i in $OUTPUT*.html; do
+	sed -i "/<HEAD>/a <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">" $i
+        sed -i "/<head>/a <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">" $i	
+done
+cp style.css $OUTPUT

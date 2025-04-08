@@ -4,3 +4,5 @@ Title[%KEY%]: Total Ping Count
 MaxBytes[%KEY%]: 55
 Target[%KEY%]: `sh %FILE%`
 PageTop[%KEY%]: <h1>Total Ping count %HOST%</h1>
+WithPeak[%KEY%]: ymwd                                                                                                                                           
+Colours[%KEY%]: GREEN#00FF00,BLUE#0000FF,DARK GREEN#006600,VIOLET#FF00FF
