@@ -8,7 +8,7 @@ rm _tmp*.sh
 while IFS=: read -r action host; do
 	# Present action and host
 	KEY=${action}_$(echo "${host}" | sed "s/\./_/g")
-	FILE=_tmp_${KEY}_${action}.sh
+	FILE=_tmp_${KEY}.sh
 	
 	cat ${action}.sh | sed "s/%HOST%/$host/g" > $FILE
 	chmod +x $FILE
