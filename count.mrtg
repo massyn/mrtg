@@ -3,7 +3,7 @@ YLegend[%KEY%]: Ping Count:
 Title[%KEY%]: Total Ping Count
 MaxBytes[%KEY%]: 55
 Target[%KEY%]: `sh %FILE%`
-PageTop[%KEY%]: <h1>Total Ping count %HOST%</h1>
+PageTop[%KEY%]: <div class="nav"><a href="index.html">í¿  Home</a></div><br><h1>Ping count for %HOST%</h1>
 WithPeak[%KEY%]: ymwd                                                                                                                                           
 Colours[%KEY%]: GREEN#00FF00,BLUE#0000FF,DARK GREEN#006600,VIOLET#FF00FF
 AddHead[%KEY%]: <link rel="stylesheet" type="text/css" href="style.css">
