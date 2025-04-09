@@ -4,7 +4,7 @@ Title[%KEY%]: Total Latency
 MaxBytes[%KEY%]: 1000 
 ShortLegend[%KEY%]: ms
 Target[%KEY%]: `sh %FILE%`
-PageTop[%KEY%]: <div class="nav"><a href="index.html">Home</a></div><br><h1>Latency for %HOST%</h1>
+PageTop[%KEY%]: <div class="nav"><a href="index.html">Home</a></div><br><h1>Latency for %ALIAS%</h1>
 WithPeak[%KEY%]: ymwd
 Colours[%KEY%]: GREEN#00FF00,BLUE#0000FF,DARK GREEN#006600,VIOLET#FF00FF
 AddHead[%KEY%]: <link rel="stylesheet" type="text/css" href="style.css">
