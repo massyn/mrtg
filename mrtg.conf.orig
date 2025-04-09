@@ -1,0 +1,4 @@
+WorkDir: /var/www/html/mrtg
+Refresh: 300
+Interval: 5
+
