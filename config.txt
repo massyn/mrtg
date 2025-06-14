@@ -1,5 +1,5 @@
 count:8.8.8.8:Google DNS
-count:192.168.1.1
+count:192.168.0.1:Home Router
 latency:8.8.8.8
 latency:lens.meet.l.google.com:Google Meet
 latency:speedtest.tpg.com.au.prod.hosts.ooklaserver.net
