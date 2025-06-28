@@ -5,7 +5,7 @@ set -e
 git fetch origin
 
 LOCAL=$(git rev-parse @)
-REMOTE=$(git rev-parse @{u)
+REMOTE=$(git rev-parse @{u})
 
 if [ "$LOCAL" = "$REMOTE" ]; then
     echo "No changes detected. Build not needed."
