@@ -23,10 +23,11 @@ sudo chown -R $USER:www-data /var/www/html
 
 # Define the crontab entry you want to check
 set -f
-ensure_cron_entry "*/5 * * * * cd $(pwd) && . .env && ./mrtg.sh && /usr/bin/curl -fsS -m 10 --retry 5 -o /dev/null \$HOSTCHECK > /tmp/mrtg.log 2>&1"
+ensure_cron_entry "*/5 * * * * $(pwd)/crontab.sh > /tmp/mrtg.log 2>&1"
 # this doesn't work so well... it needs sudi
 #ensure_cron_entry "*/15 * * * * cd $(pwd) && ./build.sh > /tmp/build.log 2>&1"
 
 chmod +x mrtg.sh
-chmod +x build.sh
+chmod +x crontab.sh
+#chmod +x build.sh
 
