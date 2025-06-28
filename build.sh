@@ -15,5 +15,5 @@ fi
 echo "Changes detected. Pulling latest and running build..."
 git pull
 
-sh ./install.sh
+sudo sh ./install.sh
 sh ./config.sh
