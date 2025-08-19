@@ -9,5 +9,10 @@ Actions can be `count` or `latency`
 
 ```bash
 $ sudo ./install.sh
-$ ./config.txt
+$ ./config.sh
+```
+If you want to use another config file...
+
+```bash
+$ ./config.sh config_do.txt
 ```

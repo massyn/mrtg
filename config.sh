@@ -1,5 +1,6 @@
 #!/bin/sh
 
+CONFIG_FILE=${1:-config.txt}
 CONF=mrtg.conf
 OUTPUT=/var/www/html/mrtg/
 
@@ -20,7 +21,7 @@ while IFS=: read -r action host alias; do
 	chmod +x $FILE
 
 	cat ${action}.mrtg | sed "s/%HOST%/$host/g" | sed "s/%KEY%/$KEY/g" | sed "s/%FILE%/$FILE/g" | sed "s/%ALIAS%/$ALIAS/g">> $CONF
-done  < config.txt
+done  < "$CONFIG_FILE"
 
 indexmaker mrtg.conf --output ${OUTPUT}index.html
 
